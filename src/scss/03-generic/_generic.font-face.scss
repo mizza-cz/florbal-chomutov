@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "NTF";
+  src: url("../fonts/NTF.woff2") format("woff2"),
+    url("../fonts/NTF.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NTF";
+  src: url("../fonts/ntf-medium.woff2") format("woff2"),
+    url("../fonts/ntf-medium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "uniform";
+  src: url("../fonts/Uniform-Black.woff2") format("woff2"),
+    url("../fonts/Uniform-Black.woff") format("woff");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "uniform";
+  src: url("../fonts/Uniform-Bold.woff2") format("woff2"),
+    url("../fonts/Uniform-Bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
