@@ -18,6 +18,34 @@
       crossorigin
     />
     <link rel="preload" href="js/scripts.js" as="script" />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Получите все ссылки на элементы
+        const links = document.querySelectorAll(".card .link.link--brown");
+
+        // Добавьте обработчик клика для каждой карточки
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const cardId = link.closest(".card").getAttribute("data-card-id");
+            const box = document.querySelector(
+              `.card[data-card-id="${cardId}"] .box`
+            );
+            const action = link.getAttribute("data-action");
+
+            if (action === "show") {
+              box.style.display = "block";
+              link.innerText = "Závřít";
+              link.setAttribute("data-action", "hide");
+            } else {
+              box.style.display = "none";
+              link.innerText = "Číst více";
+              link.setAttribute("data-action", "show");
+            }
+          });
+        });
+      });
+    </script>
   </head>
   <body>
     {% if title != "02.0_posts" %}
@@ -49,7 +77,10 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+      async
+    ></script>
     <script defer src="js/scripts.js"></script>
   </body>
 </html>

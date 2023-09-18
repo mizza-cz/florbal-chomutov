@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>01.0_homepage - Název projektu</title>
+	<title>02.0_posts - Název projektu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="preload" href="css/styles.css" as="style" />
@@ -11,36 +11,10 @@
 	<link rel="stylesheet" media="print" href="css/prints.css" />
 	<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" as="script" crossorigin />
 	<link rel="preload" href="js/scripts.js" as="script" />
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-			// Получите все ссылки на элементы
-			const links = document.querySelectorAll(".card .link.link--brown");
-			// Добавьте обработчик клика для каждой карточки
-			links.forEach((link) => {
-				link.addEventListener("click", function(e) {
-					e.preventDefault();
-					const cardId = link.closest(".card").getAttribute("data-card-id");
-					const box = document.querySelector(
-						`.card[data-card-id="${cardId}"] .box`
-					);
-					const action = link.getAttribute("data-action");
-					if (action === "show") {
-						box.style.display = "block";
-						link.innerText = "Závřít";
-						link.setAttribute("data-action", "hide");
-					} else {
-						box.style.display = "none";
-						link.innerText = "Číst více";
-						link.setAttribute("data-action", "show");
-					}
-				});
-			});
-		});
-	</script>
 </head>
 
 <body>
-	<div class="base">
+	<div class="base-posts">
 		<header class="header">
 			<div class="container">
 				<div class="header__inner">
@@ -50,6 +24,12 @@
 					<div class="header__box">
 						<nav class="header-nav">
 							<ul class="header-nav__menu">
+								<li class="header-nav__list">
+									<a href="#" class="header-nav__list-link"> PRO VEŘEJNOST </a>
+								</li>
+								<li class="header-nav__list">
+									<a href="#" class="header-nav__list-link"> PRO ČLENY</a>
+								</li>
 								<li class="header-nav__list">
 									<a href="#" class="header-nav__list-link"> E-shop </a>
 								</li>
@@ -100,56 +80,236 @@
 							<img src="images/content/logo-top.png" loading="lazy" alt="" />
 						</div>
 						<div class="top-section__info">
-							<span>Florbal Chomutov</span>
-							<h1>TADY JSME DOMA!</h1>
+							<span>naše akce a kempy</span>
+							<h1>
+								ZAŽIJ TO <br />
+								S NÁMI!
+							</h1>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="hp-links">
+			<section class="cards-section">
 				<div class="container">
-					<ul class="hp-links__inner">
-						<li class="hp-links__box">
-							<a href="#" class="hp-links__item">
-								<img src="images/content/link-1.png" loading="lazy" alt="" />
-								<div class="hp-links__title">
-									Klubový web
-									<img src="images/content/arrow-links.png" alt="" />
+					<ul class="card-columns" data-masonry='{"percentPosition": true }'>
+						<li class="card-col">
+							<div class="card">
+								<div class="tag tag--red">PRO ČLENY</div>
+								<div class="card-box">
+									<a href="#" class="card-title">LETNÍ SOUSTŘEDĚNÍ 2023</a>
+									<div class="card-date">26.8. - 2.9. 2023</div>
+									<div class="row">
+										<div class="col-xxl-6">
+											<ul class="card-price">
+												<li><strong>Cena: </strong> 6.500 Kč</li>
+												<li><strong>Ročníky: </strong> 2002 - 2015</li>
+											</ul>
+										</div>
+										<div class="col-xxl-6">
+											<ul class="card-price">
+												<li><strong>Kapacita: </strong> 160 účastníků</li>
+												<li><strong>Příhlášení: </strong> členská sekce</li>
+											</ul>
+										</div>
+									</div>
+									<ul class="card-contact">
+										<li><strong>Kontaktní osoba: </strong> Petr Neumaier</li>
+										<li>
+											<a href="mailto:neumaier@florbalchomutov.cz">neumaier@florbalchomutov.cz</a>
+											| <a href="tel:+420728119475 ">+420 728 119 475 </a>
+										</li>
+									</ul>
+									<p>
+										Pět dní cestování a skvělých zážitků. Na příměstském kempu se
+										nikdo nebude nudit. Naši trenéři vás provedou nejlepšími atrakcemi
+										v blízkém i vzdálenějším okolí. Užijete si spoustu výletů, zábavy
+										a nových zkušeností. Na výběr máte ze dvou turnusů.
+									</p>
+									<a href="#" class="link link--brown">Číst více</a>
 								</div>
-							</a>
+							</div>
 						</li>
-						<li class="hp-links__box">
-							<a href="#" class="hp-links__item">
-								<img src="images/content/link-2.png" loading="lazy" alt="" />
-								<div class="hp-links__title">
-									Přidej se k nám!
-									<img src="images/content/arrow-links.png" alt="" />
+						<li class="card-col">
+							<div class="card">
+								<div class="tag tag--red">PRO ČLENY</div>
+								<div class="card-box">
+									<a href="#" class="card-title">LETNÍ SOUSTŘEDĚNÍ 2023</a>
+									<div class="card-date">26.8. - 2.9. 2023</div>
+									<div class="row">
+										<div class="col-xxl-6">
+											<ul class="card-price">
+												<li><strong>Cena: </strong> 6.500 Kč</li>
+												<li><strong>Ročníky: </strong> 2002 - 2015</li>
+											</ul>
+										</div>
+										<div class="col-xxl-6">
+											<ul class="card-price">
+												<li><strong>Kapacita: </strong> 160 účastníků</li>
+												<li><strong>Příhlášení: </strong> členská sekce</li>
+											</ul>
+										</div>
+									</div>
+									<ul class="card-contact">
+										<li><strong>Kontaktní osoba: </strong> Petr Neumaier</li>
+										<li>
+											<a href="mailto:neumaier@florbalchomutov.cz">neumaier@florbalchomutov.cz</a>
+											| <a href="tel:+420728119475 ">+420 728 119 475 </a>
+										</li>
+									</ul>
+									<ul class="card-contact">
+										<li><strong>Kontaktní osoba: </strong> Petr Neumaier</li>
+										<li>
+											<a href="mailto:neumaier@florbalchomutov.cz">neumaier@florbalchomutov.cz</a>
+											| <a href="tel:+420728119475 ">+420 728 119 475 </a>
+										</li>
+									</ul>
+
+									<a href="#" class="link link--brown">Číst více</a>
 								</div>
-							</a>
+							</div>
 						</li>
-						<li class="hp-links__box">
-							<a href="#" class="hp-links__item">
-								<img src="images/content/link-3.png" loading="lazy" alt="" />
-								<div class="hp-links__title">
-									akce a kempy
-									<img src="images/content/arrow-links.png" alt="" />
+						<li class="card-col">
+							<div class="card">
+								<div class="tag tag--red">PRO ČLENY</div>
+								<div class="card-box">
+									<a href="#" class="card-title">LETNÍ SOUSTŘEDĚNÍ 2023</a>
+									<div class="card-date">26.8. - 2.9. 2023</div>
+									<div class="row">
+										<div class="col-xxl-6">
+											<ul class="card-price">
+												<li><strong>Cena: </strong> 6.500 Kč</li>
+												<li><strong>Ročníky: </strong> 2002 - 2015</li>
+											</ul>
+										</div>
+										<div class="col-xxl-6">
+											<ul class="card-price">
+												<li><strong>Kapacita: </strong> 160 účastníků</li>
+												<li><strong>Příhlášení: </strong> členská sekce</li>
+											</ul>
+										</div>
+									</div>
+									<ul class="card-contact">
+										<li><strong>Kontaktní osoba: </strong> Petr Neumaier</li>
+										<li>
+											<a href="mailto:neumaier@florbalchomutov.cz">neumaier@florbalchomutov.cz</a>
+											| <a href="tel:+420728119475 ">+420 728 119 475 </a>
+										</li>
+									</ul>
+									<ul class="card-contact">
+										<li><strong>Kontaktní osoba: </strong> Petr Neumaier</li>
+										<li>
+											<a href="mailto:neumaier@florbalchomutov.cz">neumaier@florbalchomutov.cz</a>
+											| <a href="tel:+420728119475 ">+420 728 119 475 </a>
+										</li>
+									</ul>
+									<p>
+										Pět dní cestování a skvělých zážitků. Na příměstském kempu se
+										nikdo nebude nudit. Naši trenéři vás provedou nejlepšími atrakcemi
+										v blízkém i vzdálenějším okolí. Užijete si spoustu výletů, zábavy
+										a nových zkušeností. Na výběr máte ze dvou turnusů.
+									</p>
 								</div>
-							</a>
+							</div>
 						</li>
-						<li class="hp-links__box">
-							<a href="#" class="hp-links__item">
-								<img src="images/content/link-4.png" loading="lazy" alt="" />
-								<div class="hp-links__title">
-									školky a školy
-									<img src="images/content/arrow-links.png" alt="" />
+						<li class="card-col">
+							<div class="card">
+								<div class="tag tag--orange">PRO VEŘEJNOST</div>
+								<div class="card-box">
+									<a href="#" class="card-title">Floorball skills camp KID</a>
+									<div class="card-date">26.8. - 2.9. 2023</div>
+									<div class="row">
+										<div class="col-xxl-6">
+											<ul class="card-price">
+												<li><strong>Cena: </strong> 6.500 Kč</li>
+												<li><strong>Ročníky: </strong> 2002 - 2015</li>
+											</ul>
+										</div>
+										<div class="col-xxl-6">
+											<ul class="card-price">
+												<li><strong>Kapacita: </strong> 160 účastníků</li>
+											</ul>
+										</div>
+									</div>
+									<ul class="card-contact">
+										<li><strong>Kontaktní osoba: </strong> Petr Neumaier</li>
+										<li>
+											<a href="mailto:neumaier@florbalchomutov.cz">neumaier@florbalchomutov.cz</a>
+											| <a href="tel:+420728119475 ">+420 728 119 475 </a>
+										</li>
+									</ul>
+
+									<a href="#" class="link link--white">PŘIHLÁSIT SE</a>
 								</div>
-							</a>
+							</div>
+						</li>
+						<li class="card-col">
+							<div class="card">
+								<div class="tag tag--orange">PRO VEŘEJNOST</div>
+								<div class="card-box">
+									<a href="#" class="card-title">Floorball skills camp KID</a>
+									<div class="card-date">26.8. - 2.9. 2023</div>
+									<div class="row">
+										<div class="col-xxl-6">
+											<ul class="card-price">
+												<li><strong>Cena: </strong> 6.500 Kč</li>
+												<li><strong>Ročníky: </strong> 2002 - 2015</li>
+												<li><strong>Kapacita: </strong> 160 účastníků</li>
+											</ul>
+										</div>
+										<div class="col-xxl-6">
+											<ul class="card-contact">
+												<li><strong>Kontaktní osoba: </strong> Petr Neumaier</li>
+												<li>
+													<a href="mailto:neumaier@florbalchomutov.cz">neumaier@florbalchomutov.cz</a>
+												</li>
+												<li>
+													<a href="tel:+420728119475 ">+420 728 119 475 </a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<a href="#" class="link link--white"> PŘIHLÁSIT SE</a>
+								</div>
+								<img src="images/content/link-2.png" alt="" />
+							</div>
+						</li>
+						<li class="card-col">
+							<div class="card">
+								<div class="tag tag--orange">PRO VEŘEJNOST</div>
+								<div class="card-box">
+									<a href="#" class="card-title">Floorball skills camp KID</a>
+									<div class="card-date">26.8. - 2.9. 2023</div>
+									<div class="row">
+										<div class="col-xxl-6">
+											<ul class="card-price">
+												<li><strong>Cena: </strong> 6.500 Kč</li>
+												<li><strong>Ročníky: </strong> 2002 - 2015</li>
+											</ul>
+										</div>
+										<div class="col-xxl-6">
+											<ul class="card-price">
+												<li><strong>Kapacita: </strong> 160 účastníků</li>
+											</ul>
+										</div>
+									</div>
+									<ul class="card-contact">
+										<li><strong>Kontaktní osoba: </strong> Petr Neumaier</li>
+										<li>
+											<a href="mailto:neumaier@florbalchomutov.cz">neumaier@florbalchomutov.cz</a>
+											| <a href="tel:+420728119475 ">+420 728 119 475 </a>
+										</li>
+									</ul>
+
+									<a href="#" class="link link--white">PŘIHLÁSIT SE</a>
+								</div>
+							</div>
 						</li>
 					</ul>
 				</div>
 			</section>
 		</main>
-		<footer class="footer">
+		<footer class="footer footer-dark">
 			<div class="container">
 				<div class="footer-contacts">
 					<div class="footer__title">Kontakt</div>
@@ -183,7 +343,6 @@
 									</ul>
 								</div>
 							</div>
-
 						</div>
 						<div class="col-xxl-2">
 							<div class="footer-social">

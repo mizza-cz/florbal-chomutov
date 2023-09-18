@@ -11,6 +11,32 @@
 	<link rel="stylesheet" media="print" href="css/prints.css" />
 	<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" as="script" crossorigin />
 	<link rel="preload" href="js/scripts.js" as="script" />
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			// Получите все ссылки на элементы
+			const links = document.querySelectorAll(".card .link.link--brown");
+			// Добавьте обработчик клика для каждой карточки
+			links.forEach((link) => {
+				link.addEventListener("click", function(e) {
+					e.preventDefault();
+					const cardId = link.closest(".card").getAttribute("data-card-id");
+					const box = document.querySelector(
+						`.card[data-card-id="${cardId}"] .box`
+					);
+					const action = link.getAttribute("data-action");
+					if (action === "show") {
+						box.style.display = "block";
+						link.innerText = "Závřít";
+						link.setAttribute("data-action", "hide");
+					} else {
+						box.style.display = "none";
+						link.innerText = "Číst více";
+						link.setAttribute("data-action", "show");
+					}
+				});
+			});
+		});
+	</script>
 </head>
 
 <body>
@@ -91,9 +117,9 @@
 			</section>
 			<section class="cards-section">
 				<div class="container">
-					<ul class="card-columns" data-masonry='{"percentPosition": true }'>
+					<ul class="card-columns">
 						<li class="card-col">
-							<div class="card">
+							<div class="card" data-card-id="card1">
 								<div class="tag tag--red">PRO ČLENY</div>
 								<div class="card-box">
 									<a href="#" class="card-title">LETNÍ SOUSTŘEDĚNÍ 2023</a>
@@ -119,18 +145,21 @@
 											| <a href="tel:+420728119475 ">+420 728 119 475 </a>
 										</li>
 									</ul>
-									<p>
-										Pět dní cestování a skvělých zážitků. Na příměstském kempu se
-										nikdo nebude nudit. Naši trenéři vás provedou nejlepšími atrakcemi
-										v blízkém i vzdálenějším okolí. Užijete si spoustu výletů, zábavy
-										a nových zkušeností. Na výběr máte ze dvou turnusů.
-									</p>
-									<a href="#" class="link link--brown">Číst více</a>
+									<div class="box" data-box-id="card1">
+										<p>
+											Pět dní cestování a skvělých zážitků. Na příměstském kempu se
+											nikdo nebude nudit. Naši trenéři vás provedou nejlepšími
+											atrakcemi v blízkém i vzdálenějším okolí. Užijete si spoustu
+											výletů, zábavy a nových zkušeností. Na výběr máte ze dvou
+											turnusů.
+										</p>
+									</div>
+									<div data-action="show" class="link link--brown">Číst více</div>
 								</div>
 							</div>
 						</li>
 						<li class="card-col">
-							<div class="card">
+							<div class="card" data-card-id="card2">
 								<div class="tag tag--red">PRO ČLENY</div>
 								<div class="card-box">
 									<a href="#" class="card-title">LETNÍ SOUSTŘEDĚNÍ 2023</a>
@@ -163,13 +192,28 @@
 											| <a href="tel:+420728119475 ">+420 728 119 475 </a>
 										</li>
 									</ul>
-
-									<a href="#" class="link link--brown">Číst více</a>
+									<div class="box" data-box-id="card2">
+										<p>
+											Pět dní cestování a skvělých zážitků. Na příměstském kempu se
+											nikdo nebude nudit. Naši trenéři vás provedou nejlepšími
+											atrakcemi v blízkém i vzdálenějším okolí. Užijete si spoustu
+											výletů, zábavy a nových zkušeností. Na výběr máte ze dvou
+											turnusů.
+										</p>
+										<p>
+											Pět dní cestování a skvělých zážitků. Na příměstském kempu se
+											nikdo nebude nudit. Naši trenéři vás provedou nejlepšími
+											atrakcemi v blízkém i vzdálenějším okolí. Užijete si spoustu
+											výletů, zábavy a nových zkušeností. Na výběr máte ze dvou
+											turnusů.
+										</p>
+									</div>
+									<div class="link link--brown" data-action="show">Číst více</div>
 								</div>
 							</div>
 						</li>
 						<li class="card-col">
-							<div class="card">
+							<div class="card" data-card-id="card3">
 								<div class="tag tag--red">PRO ČLENY</div>
 								<div class="card-box">
 									<a href="#" class="card-title">LETNÍ SOUSTŘEDĚNÍ 2023</a>
@@ -202,12 +246,23 @@
 											| <a href="tel:+420728119475 ">+420 728 119 475 </a>
 										</li>
 									</ul>
-									<p>
-										Pět dní cestování a skvělých zážitků. Na příměstském kempu se
-										nikdo nebude nudit. Naši trenéři vás provedou nejlepšími atrakcemi
-										v blízkém i vzdálenějším okolí. Užijete si spoustu výletů, zábavy
-										a nových zkušeností. Na výběr máte ze dvou turnusů.
-									</p>
+									<div class="box" data-box-id="card3">
+										<p>
+											Pět dní cestování a skvělých zážitků. Na příměstském kempu se
+											nikdo nebude nudit. Naši trenéři vás provedou nejlepšími
+											atrakcemi v blízkém i vzdálenějším okolí. Užijete si spoustu
+											výletů, zábavy a nových zkušeností. Na výběr máte ze dvou
+											turnusů.
+										</p>
+										<p>
+											Pět dní cestování a skvělých zážitků. Na příměstském kempu se
+											nikdo nebude nudit. Naši trenéři vás provedou nejlepšími
+											atrakcemi v blízkém i vzdálenějším okolí. Užijete si spoustu
+											výletů, zábavy a nových zkušeností. Na výběr máte ze dvou
+											turnusů.
+										</p>
+									</div>
+									<div data-action="show" class="link link--brown">Číst více</div>
 								</div>
 							</div>
 						</li>

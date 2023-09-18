@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>01.0_homepage - Název projektu</title>
+	<title>03.0_formular - Název projektu</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 	<meta name="format-detection" content="telephone=no" />
 	<link rel="preload" href="css/styles.css" as="style" />
@@ -100,52 +100,78 @@
 							<img src="images/content/logo-top.png" loading="lazy" alt="" />
 						</div>
 						<div class="top-section__info">
-							<span>Florbal Chomutov</span>
-							<h1>TADY JSME DOMA!</h1>
+							<span>naše akce a kempy</span>
+							<h1>
+								ZAŽIJ TO <br />
+								S NÁMI!
+							</h1>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="hp-links">
+			<section class="formular-section">
 				<div class="container">
-					<ul class="hp-links__inner">
-						<li class="hp-links__box">
-							<a href="#" class="hp-links__item">
-								<img src="images/content/link-1.png" loading="lazy" alt="" />
-								<div class="hp-links__title">
-									Klubový web
-									<img src="images/content/arrow-links.png" alt="" />
+					<div class="formular-section__inner">
+						<div class="formular-section__form">
+							<h2 class="h2">Přihlašovací formulář</h2>
+							<form class="formular">
+								<label for="" class="formular__label">
+									<span>Jméno dítěte*</span>
+									<input name="name" type="text" required />
+								</label>
+								<label for="" class="formular__label">
+									<span>Příjmení dítěte*</span>
+									<input name="surname" type="text" required />
+								</label>
+								<label for="" class="formular__label">
+									<span>Datum narození dítěte*</span>
+									<input name="date" type="text" />
+								</label>
+								<label for="" class="formular__label">
+									<span>Jméno zákonného zástupce</span>
+									<input name="name-2" type="text" required />
+								</label>
+								<label for="" class="formular__label">
+									<span>Příjmení zákonného zástupce*</span>
+									<input name="surname-2" type="text" required />
+								</label>
+								<label for="" class="formular__label">
+									<span>Telefon na zákonného zástupce*</span>
+									<input type="tel" name="tel" required />
+								</label>
+								<label for="" class="formular__label">
+									<span>E-mail na zákonného zástupce*</span>
+									<input type="mail" name="mail" required />
+								</label>
+								<label for="" class="formular__label">
+									<span>Stravovací omezení*</span>
+									<input type="text" name="food" required />
+								</label>
+								<label for="" class="formular__label">
+									<span>Kde jste se o nás dozvěděli?*</span>
+									<input type="text" name="text" required />
+								</label>
+
+								<div class="formular__team">
+									<label for="" class="formular__label">
+										<span>Klub*</span>
+										<input type="text" name="team" required />
+									</label>
+									<label for="" class="formular__label">
+										<span>Pozice*</span>
+										<select class="js-select" name="" id="">
+											<option value="">výběr</option>
+											<option value="">hráč</option>
+											<option value="">brankář</option>
+										</select>
+									</label>
 								</div>
-							</a>
-						</li>
-						<li class="hp-links__box">
-							<a href="#" class="hp-links__item">
-								<img src="images/content/link-2.png" loading="lazy" alt="" />
-								<div class="hp-links__title">
-									Přidej se k nám!
-									<img src="images/content/arrow-links.png" alt="" />
+								<div class="formular__button">
+									<button>Odeslat</button>
 								</div>
-							</a>
-						</li>
-						<li class="hp-links__box">
-							<a href="#" class="hp-links__item">
-								<img src="images/content/link-3.png" loading="lazy" alt="" />
-								<div class="hp-links__title">
-									akce a kempy
-									<img src="images/content/arrow-links.png" alt="" />
-								</div>
-							</a>
-						</li>
-						<li class="hp-links__box">
-							<a href="#" class="hp-links__item">
-								<img src="images/content/link-4.png" loading="lazy" alt="" />
-								<div class="hp-links__title">
-									školky a školy
-									<img src="images/content/arrow-links.png" alt="" />
-								</div>
-							</a>
-						</li>
-					</ul>
+							</form>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
