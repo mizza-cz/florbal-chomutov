@@ -1,6 +1,6 @@
 .link--brown {
   background-color: var(--color-brown);
-  height: 36px;
+  height: 38px;
   font-size: 24px;
   font-family: "NTF";
   color: var(--color-light);
@@ -9,6 +9,13 @@
   text-align: center;
   margin-top: 20px;
   letter-spacing: 0.5px;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  &:hover {
+    border: 2px solid var(--color-brown);
+    background-color: var(--color-light);
+    color: var(--color-brown);
+  }
 }
 .link--white {
   border: 3px solid var(--color-dark);
@@ -22,6 +29,12 @@
   width: 140px;
   height: 50px;
   display: flex;
+  transition: all 0.3s;
+  &:hover {
+    border: 3px solid var(--color-dark);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
 }
 .link {
   align-items: center;
@@ -29,4 +42,5 @@
   text-decoration: none;
   text-align: center;
   display: flex;
+  cursor: pointer;
 }
