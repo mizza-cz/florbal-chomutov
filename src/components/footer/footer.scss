@@ -41,6 +41,7 @@
   &-contacts {
     margin-bottom: 90px;
     position: relative;
+    z-index: 99;
     &__title {
       font-weight: 500;
       font-family: "NTF";
@@ -187,7 +188,9 @@
   @include media-breakpoint-down(lg) {
     background-color: #151615;
   }
-  .footer-social__title,
+  .footer-social__title {
+    color: var(--color-brown);
+  }
   .footer-contacts li {
     color: var(--color-light);
   }
@@ -200,6 +203,9 @@
     top: 0;
     bottom: 0;
     transform: translateY(10%);
+    @include media-breakpoint-down(xxl) {
+      width: 500px;
+    }
     @include media-breakpoint-down(xl) {
       display: none;
     }
@@ -216,6 +222,7 @@
     height: 100%;
     background-repeat: no-repeat;
     transform: translateY(40%);
+    z-index: -1;
   }
   .footer-social__list a {
     background: #b18e70;
