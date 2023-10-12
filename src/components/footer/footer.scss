@@ -227,7 +227,14 @@
   .footer-social__list a {
     background: #b18e70;
     svg {
-      fill: #151615;
+      fill: #151615 !important;
+    }
+  }
+  .header-social__link.header-social__link--flickr {
+    background: #151615;
+    svg,
+    path {
+      fill: #b18e70 !important;
     }
   }
 }

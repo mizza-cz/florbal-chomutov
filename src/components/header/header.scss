@@ -173,3 +173,12 @@ main {
   opacity: 1;
   visibility: visible;
 }
+
+.header-social__link.header-social__link--flickr {
+  padding: 0;
+  background-color: #fff;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
