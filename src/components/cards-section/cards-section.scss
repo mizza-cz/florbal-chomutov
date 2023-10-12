@@ -62,18 +62,9 @@
 
 }
 .card-columns {
-  @include media-breakpoint-only(xl){
-    columns: 2;
-  }
-  @include media-breakpoint-only(lg){
-    columns: 2;
-  }
-  @include media-breakpoint-down(lg){
-    columns: 1;
-  }
-  display: block;
-  columns: 3;
-  gap: 80px 40px;
+ margin-left: -20px;
+ margin-right: -20px;
+
 }
 .card {
   background-color: var(--color-light);
@@ -83,6 +74,7 @@
 display: block;
 	width:100%;
   height: fit-content;
+ 
   &:hover{
     transform: scale(1.1);
   }
@@ -115,14 +107,31 @@ display: block;
   }
 }
 .card-col{
- 
   margin: 0;
-  display: inline-block;
-  margin-bottom: 76px;
+  display: inline;
   width: 100%;
   break-inside: avoid;
-  float: left;
+  box-sizing: border-box;
+ 
+  margin-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+.card-col,
+.grid-sizer{
+  max-width:   33.333%;
+  @include media-breakpoint-only(xl){
+    max-width:   50%;
+  }
   
+  @include media-breakpoint-only(lg){
+    max-width:   50%;
+  }
+
+  @include media-breakpoint-down(lg){
+    max-width:   100%;
+  }
 }
 .card-title{
   font-size: 3.4rem;
