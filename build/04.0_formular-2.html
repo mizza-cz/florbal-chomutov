@@ -131,7 +131,7 @@
 								</label>
 								<label for="" class="formular__label">
 									<span>Datum narození dítěte*</span>
-									<input name="date" type="text" />
+									<input name="date" type="date" />
 								</label>
 								<label for="" class="formular__label">
 									<span>Jméno zákonného zástupce</span>
@@ -147,7 +147,7 @@
 								</label>
 								<label for="" class="formular__label">
 									<span>E-mail na zákonného zástupce*</span>
-									<input type="mail" name="mail" required />
+									<input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" type="email" name="email" required />
 								</label>
 								<label for="" class="formular__label">
 									<span>Stravovací omezení*</span>
