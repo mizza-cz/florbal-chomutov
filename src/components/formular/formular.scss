@@ -53,6 +53,18 @@
   margin: 0 auto;
   position: relative;
   z-index: 9;
+  .error {
+    order: 2;
+    color: var(--color-light);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+
+    display: block;
+    font-family: "NTF";
+    font-size: 1.25rem;
+    letter-spacing: 0.03125rem;
+  }
   &__team {
     display: flex;
     width: 100%;
@@ -64,6 +76,7 @@
 
   &__button {
     width: 100%;
+    order: 2;
     button {
       display: block;
       margin-left: auto;
